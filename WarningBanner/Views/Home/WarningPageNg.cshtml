@@ -1,0 +1,27 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutNg.cshtml";
+    ViewBag.Title = "Home Page";
+}
+
+<div ng-controller="modalcontroller">
+    <script type="text/ng-template" id="myModal.html">
+        <div class="modal-header">
+            <h4 class="modal-title">Warning Banner using AngularJS + AngularUI Bootstrap</h4>
+        </div>
+        <div class="modal-body">
+            @if (ViewBag.SystemWarningMessage != null)
+            {
+                <div class="modal-body"> @Html.Raw(ViewBag.SystemWarningMessage)</div>
+            }
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-default" type="button" ng-click="ok()">OK</button>
+        </div>
+    </script>
+    @{ Html.RenderPartial("~/Views/Shared/_AntiforgeryToken.cshtml"); }
+    <span ng-init="openModal()"></span>
+</div>
+
+@section scripts{
+    <script src="~/ControllersNg/ModalController.js"></script>
+}

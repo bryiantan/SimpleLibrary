@@ -1,0 +1,10 @@
+﻿@functions{
+    public string GetAntiForgeryToken()
+    {
+        string cookieToken, formToken;
+        AntiForgery.GetTokens(null, out cookieToken, out formToken);
+        return cookieToken + "," + formToken;
+    }
+}
+<input type="hidden" id="antiForgeryToken" value="@GetAntiForgeryToken()" />
+<input id="antiForgeryTokenNg" data-ng-model="antiForgeryToken" type="hidden" data-ng-init="antiForgeryToken='@GetAntiForgeryToken()'" />    

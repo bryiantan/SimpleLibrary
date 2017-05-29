@@ -1,0 +1,69 @@
+﻿<!-- Modal -->
+<div class="modal fade" id="SharedModalDialog" role="dialog" data-keyboard="true" data-backdrop="static">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">[Title]</h4>
+            </div>
+            <div class="modal-body">[Body] </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" id="SharedModalDialogBtnOk" data-dismiss="modal">OK</button>
+                <button type="button" class="btn btn-default" id="SharedModalDialogBtnCancel" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        (function ($) {
+            // jQuery plugin definition
+            $.fn.ModalDialog = function (params) {
+
+                // merge default and user parameters
+                params = $.extend({ title: '', body: '', OkButtonText: '', OkClickRedirect: '', CancelButtonText: '' }, params);
+
+                if (params.title != '') {
+                    $(".modal-title").text(params.title);
+                }
+
+                if (params.title != '') {
+                    $(".modal-body").html(params.body);
+                }
+
+                if (params.OkButtonText != '') {
+                    $("#SharedModalDialogBtnOk").text(params.OkButtonText);
+                    $("#SharedModalDialogBtnOk").show();//.css('display', 'block');
+                }
+                else {
+                    $("#SharedModalDialogBtnOk").hide();//.css('display', 'none');
+                }
+
+                if (params.CancelButtonText != '') {
+                    $("#SharedModalDialogBtnCancel").text(params.CancelButtonText);
+                    $("#SharedModalDialogBtnCancel").show();//.css('display', 'block');
+                }
+                else {
+                    $("#SharedModalDialogBtnCancel").hide();//.css('display', 'none');
+                }
+
+                if (params.OkClickRedirect != '') {
+                    $("#SharedModalDialogBtnOk").click(function () {
+                        window.location.replace(params.OkClickRedirect);
+                    });
+                }
+
+                $('#SharedModalDialog').modal('show');
+
+                // allow jQuery chaining
+                return false;
+            };
+        })(jQuery);
+    });
+</script>

@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>ASP.NET MVC Security Warning/Login Banner using Bootstrap and AngularUI Bootstrap + reuseable modal</h1>
+    <p>
+        Some people refer to it as warning banner, Disclaimer banner, concent screen, splash screen, system acceptable use policy, log-on warning banner, login policy, Logon Banner, Logon Notice, etc...
+        Basically this is the page/notice that appear/display when the user first access the website.
+    </p>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <h2>Sample:</h2>
+        <ul>
+            <li>
+                Modify the WaningBannerAngular key in web.config  to switch the Modal between MVC AngularJS and jQuery
+            </li>
+            <li>
+                To test this, set the startup page to TestWarningPage, or, after the page load, on the url enter a /home/TestWarningPage
+                <br />
+                @Html.ActionLink("Page that should not trigger Waning Banner", "TestWarningPage", "Home", new { area = "" }, null)
+            </li>
+            <li>
+                @Html.ActionLink("Modal using AngularUI Bootstrap and template", "TestModalDialogNg", "Home", new { area = "" }, null)
+            </li>
+            <li>
+                @Html.ActionLink("Modal using Bootstrap and partial view", "TestModalDialog", "Home", new { area = "" }, null)
+            </li>
+        </ul>
+    </div>
+</div>

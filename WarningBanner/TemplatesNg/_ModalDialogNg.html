@@ -1,0 +1,11 @@
+﻿<div class="modal-header">
+    <button type="button" class="close" ng-show="showX" ng-click="cancel()">&times;</button>
+    <h3 class="modal-title">{{title}}</h3>
+</div>
+<div class="modal-body">
+    <div data-ng-bind-html="htmlBind"></div>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-default" ng-show="showOK" type="button" ng-click="ok()">{{btnOkText}}</button>
+    <button class="btn btn-default" ng-show="showCancel" type="button" ng-click="cancel()">{{btnCancelText}}</button>
+</div>
