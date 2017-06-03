@@ -39,6 +39,12 @@
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
+    <link rel="stylesheet" href="@Url.Content("~/Content/themes/base/jquery-ui.min.css")" />
+    <script src="@Url.Content("~/Scripts/jquery-ui-1.12.1.min.js")" type="text/javascript"></script>
+
+    @{ Html.RenderPartial("_WebToolTip");}
+
     @RenderSection("scripts", required: false)
+
 </body>
 </html>

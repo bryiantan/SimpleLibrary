@@ -1,5 +1,5 @@
-﻿using CommonAPI.Attribute;
-using CommonAPI.Models;
+﻿using CommonApp.Attribute;
+using CommonApp.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +7,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 
-namespace CommonAPI.Controllers
+namespace CommonApp.Controllers
 {
     [RoutePrefix("api/tooltip")]
     public class ToolTipController : BaseApiController
@@ -16,9 +16,12 @@ namespace CommonAPI.Controllers
         IList<ToolTip> toolTips = new List<ToolTip>
         {
             new ToolTip { Id = 1, Key ="registerEmail", Title = "Email", Description ="Enter your Email Address", LastUpdatedDate = DateTime.Now },
-            new ToolTip { Id = 2, Key ="password", Title = "Password", Description ="Password must contains Uppercase characters (A-Z), \r\n Lowercase characters (a-z)", LastUpdatedDate = DateTime.Now},
-            new ToolTip { Id = 3, Key ="confirmpassword", Title = "Confirm Password", Description ="Enter Password again ....", LastUpdatedDate = DateTime.Now},
-            new ToolTip { Id = 4, Key ="firstName", Title = "First Name", Description ="Enter first name", LastUpdatedDate = DateTime.Now}
+            new ToolTip { Id = 2, Key ="registerPassword", Title = "Password policy",
+                Description ="Password must contains atleast 1 Uppercase characters (A-Z) <br/>Password must contains any Lowercase characters (a-z)<br/>Password must contains 1 number of Base 10 digits (0 through 9)<br/>Password minimum length is 12", LastUpdatedDate = DateTime.Now},
+            new ToolTip { Id = 3, Key ="registerConfirmpassword", Title = "Confirm Password", Description ="Enter Password again ....", LastUpdatedDate = DateTime.Now},
+            new ToolTip { Id = 4, Key ="registerFirstName", Title = "First Name", Description ="Display tooltip from HTML element", LastUpdatedDate = DateTime.Now},
+            new ToolTip { Id = 4, Key ="registerSubmit", Title = "Submit", Description ="Click to Submit the registration", LastUpdatedDate = DateTime.Now},
+             new ToolTip { Id = 4, Key ="registerDummyParagraph", Title = "Dummy paragraph", Description ="display tooltip within paragraph element using Bootstrap popover", LastUpdatedDate = DateTime.Now}
         };
 
         //[Route("{id}")]

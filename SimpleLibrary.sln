@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WarningBanner", "WarningBanner\WarningBanner.csproj", "{90702FB3-6125-4BC3-8432-614BFBFE08F4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonAPI", "CommonAPI\CommonAPI.csproj", "{627D96DD-2B5C-4C67-A0EC-AA0DE7FC715A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonApp", "CommonAPI\CommonApp.csproj", "{627D96DD-2B5C-4C67-A0EC-AA0DE7FC715A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C70DE135-4BFC-46AD-8C04-452914CBBB18}"
 EndProject

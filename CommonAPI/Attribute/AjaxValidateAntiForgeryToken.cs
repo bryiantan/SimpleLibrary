@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http.Filters;
 
-namespace CommonAPI.Attribute
+namespace CommonApp.Attribute
 {
     //http://blog.novanet.no/anti-forgery-tokens-using-mvc-web-api-and-angularjs/
     public class AjaxValidateAntiForgeryToken : ActionFilterAttribute

@@ -1,5 +1,5 @@
-﻿using CommonAPI.Attribute;
-using CommonAPI.Models;
+﻿using CommonApp.Attribute;
+using CommonApp.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +7,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 
-namespace CommonAPI.Controllers
+namespace CommonApp.Controllers
 {
     public class Dummy
     {
