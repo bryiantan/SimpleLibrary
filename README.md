@@ -8,6 +8,11 @@
 ![alt tag](https://blog.ysatech.com/images/tooltip/boostrap_pop.PNG)
 ![alt tag](https://blog.ysatech.com/images/tooltip/jquery_ui.PNG)
 
+Dynamically add a help / tooltip / ScreenTip icon next to a form elements. A message / tip / text will be displayed when a 
+user clicks on the icon either through jQuery UI modal or Bootstrap popover, depending on the setting. 
+All the text will be stored in a centralized location and will be retrieved on demand by using a Web API call.
+
+Demo: http://mvc.ysatech.com/Account/Register
 
 ## Asp.net MVC Warning Banner using Bootstrap and AngularUI Bootstrap
 
