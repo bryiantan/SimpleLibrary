@@ -13,6 +13,7 @@ namespace CommonApp.Controllers
         {
            // public int Id { get; set; }
             public string Key { get; set; }
+            public string Other { get; set; }
         }
 
     }

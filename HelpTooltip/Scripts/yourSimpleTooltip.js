@@ -57,15 +57,16 @@
             $("#yourTooltipPanel").not(this).dialog('close');
         }
 
-        //var Dummy = {
-        //    "Key": $(this).data('yourtooltipid')
-        //};
+        var Dummy = {
+            "Key": $(this).data('yourtooltipid'),
+            "Other": "dummy to show Posting multiple parameters to API"
+        };
 
         jQuery.ajax({
             type: "POST",
             url: "http://localhost:47503/api/tooltip/GetWithPost",
-            data: JSON.stringify({ Key: $(this).data('yourtooltipid') }),
-            //data: JSON.stringify(Dummy),
+           // data: JSON.stringify({ Key: $(this).data('yourtooltipid') }),
+            data: JSON.stringify(Dummy),
             dataType: "json",
             contentType: "application/json;charset=utf-8",
             beforeSend: function (xhr) { xhr.setRequestHeader('RequestVerificationToken', $("#antiForgeryToken").val()); },
