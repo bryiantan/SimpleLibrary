@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Tooltip wihthout antiForgery token</title>
+	<meta charset="utf-8" />
+    <link href="/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/themes/base/jquery-ui.min.css" rel="stylesheet" />
+
+</head>
+<body>
+
+    <div id="yourTooltipPanel" style="display: none;"><p></p></div>
+
+    <div class="form-group">
+        <label for="Forename" class="col-md-2 control-label">First Name</label>
+        <div class="col-md-3">
+            <input type="text" class="form-control" data-yourtooltipctrl="registerFirstName" />
+        </div>
+    </div>
+    <input type="submit" class="btn btn-default" value="Register" data-yourtooltipctrl="registerSubmit" />
+    <br />
+    <p data-yourtooltipctrl="registerDummyParagraph" data-yourtooltiptype="1">Need help...</p>
+
+
+    <script src="/Scripts/jquery-3.1.1.min.js"></script>
+    <script src="/Scripts/bootstrap.min.js"></script>
+    <script src="/Scripts/jquery-ui-1.12.1.min.js"></script>
+
+    <script src="/Scripts/yourSimpleTooltipNoToken.js"></script>
+
+</body>
+</html>

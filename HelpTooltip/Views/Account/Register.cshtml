@@ -5,8 +5,6 @@
 
 <h2>@ViewBag.Title.</h2>
 
-@{ Html.RenderPartial("~/Views/Shared/_AntiforgeryToken.cshtml"); }
-
 @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
 {
     @Html.AntiForgeryToken()

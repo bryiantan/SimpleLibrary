@@ -9,7 +9,7 @@ namespace CommonApp.Controllers
 {
     public class BaseApiController : ApiController
     {
-        public class Dummy
+        public struct Dummy
         {
            // public int Id { get; set; }
             public string Key { get; set; }

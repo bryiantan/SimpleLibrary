@@ -64,12 +64,12 @@
 
         jQuery.ajax({
             type: "POST",
-            url: "http://localhost:47503/api/tooltip/GetWithPost",
+            url: "http://localhost:47503/api/tooltip/GetWithPostNoToken",
            // data: JSON.stringify({ Key: $(this).data('yourtooltipid') }),
             data: JSON.stringify(Dummy),
             dataType: "json",
             contentType: "application/json;charset=utf-8",
-            beforeSend: function (xhr) { xhr.setRequestHeader('RequestVerificationToken', $("#antiForgeryToken").val()); },
+          //  beforeSend: function (xhr) { xhr.setRequestHeader('RequestVerificationToken', $("#antiForgeryToken").val()); },
             headers: {
                 Accept: "application/json;charset=utf-8",
                 "Content-Type": "application/json;charset=utf-8"

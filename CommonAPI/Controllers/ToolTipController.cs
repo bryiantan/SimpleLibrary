@@ -71,5 +71,23 @@ namespace CommonApp.Controllers
             return Ok(toolTip);
         }
 
+
+        /// <summary>
+        /// Get content using POST method
+        /// </summary>
+        /// <param name="mid"></param>
+        /// <returns></returns>
+        [HttpPost]
+        [Route("GetWithPostNoToken")]
+        public IHttpActionResult GetWithPostNoToken(Dummy dummy)
+        {
+            var toolTip = toolTips.FirstOrDefault((p) => p.Key == dummy.Key);
+            if (toolTip == null)
+            {
+                return NotFound();
+            }
+            return Ok(toolTip);
+        }
+
     }
 }
